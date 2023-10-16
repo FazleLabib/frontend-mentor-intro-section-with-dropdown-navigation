@@ -101,5 +101,6 @@ main {
 }
 
 .attribution a { 
+    font-weight: 700;
     color: var(--almost-black); 
 }
