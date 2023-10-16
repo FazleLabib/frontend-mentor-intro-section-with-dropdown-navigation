@@ -25,6 +25,10 @@ header {
     padding: 2rem 1.5rem;
 }
 
+.desktop-navbar {
+    display: none;
+}
+
 #mobile-menu-icon {
     cursor: pointer;
 }
@@ -124,13 +128,19 @@ header {
         display: none;
     }
 
-    nav {
+    .desktop-navbar {
+        display: block;
         width: 100%;
         display: flex;
         justify-content: space-between;
     }
 
-    .has-drop-down {
+    .drop-down {
+        position: relative;
+        display: inline-block;
+    }
+
+    .drop-down-btn {
         cursor: pointer;
         display: flex;
         gap: 0.5rem;
@@ -138,7 +148,7 @@ header {
         justify-content: center;
     }
 
-    .has-drop-down span {
+    .drop-down-btn span {
         width: 1rem;
         aspect-ratio: 1;
         background: url(./images/icon-arrow-down.svg) no-repeat;
@@ -151,17 +161,59 @@ header {
     }
 
     nav a:hover,
-    .has-drop-down:hover a {
+    .drop-down-btn:hover a {
         transition: .2s ease-out;
         color: var(--almost-black);
     }
 
-    .has-drop-down:hover span {
+    .drop-down-btn:hover span {
         transition: .2s ease-out;
         background: url(./images/icon-arrow-up.svg) no-repeat;
         background-position: center;
         filter: brightness(0);
     }
+      
+    .drop-down-content {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        background-color: var(--almost-white);
+        border-radius: 0.5rem;
+        box-shadow: 0px 10px 50px -25px var(--almost-black);
+        z-index: 1;
+        padding: 1rem;
+        opacity: 0;
+    }
+    
+    #features-menu {
+        transform: translateX(-4rem);
+    }
+
+    #company-menu {
+        min-width: 6rem;
+    }
+
+    .drop-down-content a {
+        display: flex;
+        gap: 0.85rem;
+        align-items: center;
+        font-size: 0.95rem;
+        text-decoration: none;
+        color: var(--medium-gray);
+        padding: 0.5rem;
+    }
+      
+    .drop-down-content a:hover {
+        transition: .2s ease-out;
+        color: var(--almost-black);
+    }
+
+    .drop-down:hover .drop-down-content,
+    .drop-down:focus .drop-down-content {
+        transition: .2s ease-out;
+        opacity: 1;
+    }
+
 
     nav .links,
     nav .buttons {
