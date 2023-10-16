@@ -125,6 +125,10 @@ header {
         justify-content: center;
     }
 
+    #mobile-menu-icon {
+        display: none;
+    }
+    
     .content {
         align-items: flex-start;
         justify-content: center;
