@@ -17,11 +17,16 @@
 body {
     background-color: var(--almost-white);
 }
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem 1.5rem;
+}
+
+#mobile-menu-icon {
+    cursor: pointer;
 }
 
 main {
@@ -57,15 +62,24 @@ main {
 }
 
 .content button {
+    cursor: pointer;
     outline: none;
     border: none;
     font-weight: 700;
     font-size: 1.25rem;
     background-color: var(--almost-black);
     color: var(--almost-white);
+    border: 2px solid transparent;
     border-radius: 1rem;
     margin: 2rem 0;
     padding: 1.25rem 1.85rem;
+}
+
+.content button:hover {
+    transition: .2s ease-out;
+    background-color: transparent;
+    color: var(--almost-black);
+    border: 2px solid var(--almost-black);
 }
 
 .client-logos {
