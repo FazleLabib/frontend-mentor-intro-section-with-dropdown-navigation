@@ -29,12 +29,16 @@ header {
     cursor: pointer;
 }
 
-main {
+.container {
     display: flex;
     flex-direction: column;
 }
 
-.hero img {
+.hero picture {
+    width: 100%;
+}
+
+.hero picture img {
     width: 100%;
 }
 
@@ -52,6 +56,10 @@ main {
     font-size: 2.25rem;
     color: var(--almost-black);
     margin: 1.5rem 0;
+}
+
+#desktop-heading {
+    display: none;
 }
 
 .content p {
@@ -103,4 +111,51 @@ main {
 .attribution a { 
     font-weight: 700;
     color: var(--almost-black); 
+}
+
+@media screen and (min-width: 850px) {
+
+    .container {
+        margin: 0 8%;
+        margin-bottom: 8%;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 12%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        align-items: flex-start;
+        justify-content: center;
+        text-align:start;
+        padding: 2rem 1.5rem;
+    }
+
+    .content h1 {
+        font-size: 5.5em;
+        margin: 2rem 0;
+    }
+
+    #desktop-heading {
+        display: block;
+    }
+
+    #mobile-heading {
+        display: none;
+    }
+    
+    .content p {
+        max-width: 80%;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .client-logos {
+        margin: 4rem 0;
+    }
+    
+    .client-logos img {
+        width: 5.5rem;
+    }
 }
