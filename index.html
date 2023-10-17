@@ -21,17 +21,12 @@
     <header>
       <img src="./images/logo.svg" alt="Logo of Snap">
       <img id="mobile-menu-icon" src="./images/icon-menu.svg" alt="Icon consisting of three horizontal lines">
-      <!-- Features
-      Company
-      Careers
-      About 
-      Login
-      Register-->
-      <nav id="desktop-navbar">
-        <div class="links">
+      <nav class="overlay" id="mobile-nav">
+        <img id="menu-close-icon" src="./images/icon-close-menu.svg" alt="Icon of close/X symbol">
+        <div class="overlay-content">
           <div class="drop-down">
             <div class="drop-down-btn">
-              <a href="">Features</a>
+              <a>Features</a>
               <span></span>
             </div>
             <div class="drop-down-content" id="features-menu">
@@ -55,7 +50,58 @@
           </div>
           <div class="drop-down">
             <div class="drop-down-btn">
-              <a href="">Company</a>
+              <a>Company</a>
+              <span></span>
+            </div>
+            <div class="drop-down-content" id="company-menu">
+              <a href="#">History</a>
+              <a href="#">Our Team</a>
+              <a href="#">Blog</a>
+            </div>
+          </div>
+          <a href="">Careers</a>
+          <a href="">About</a>
+          <div class="buttons">
+            <a href="">Login</a>
+            <a id="register-btn" href="">Register</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Features
+      Company
+      Careers
+      About 
+      Login
+      Register-->
+      <nav id="desktop-navbar">
+        <div class="links">
+          <div class="drop-down">
+            <div class="drop-down-btn">
+              <a>Features</a>
+              <span></span>
+            </div>
+            <div class="drop-down-content" id="features-menu">
+              <a href="#">
+                <span><img src="./images/icon-todo.svg" alt="Icon of a notepad"></span>
+                <span>Todo List</span>
+              </a>
+              <a href="#">
+                <span><img src="./images/icon-calendar.svg" alt="Icon of a calendar"></span>
+                <span>Calendar</span>
+              </a>
+              <a href="#">
+                <span><img src="./images/icon-reminders.svg" alt="Icon of a bell"></span>
+                <span>Reminders</span>
+              </a>
+              <a href="#">
+                <span><img src="./images/icon-planning.svg" alt="Icon of a clock"></span>
+                <span>Planning</span>
+              </a>
+            </div>
+          </div>
+          <div class="drop-down">
+            <div class="drop-down-btn">
+              <a>Company</a>
               <span></span>
             </div>
             <div class="drop-down-content" id="company-menu">
