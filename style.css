@@ -128,7 +128,7 @@ header {
         display: none;
     }
 
-    .desktop-navbar {
+    #desktop-navbar {
         display: block;
         width: 100%;
         display: flex;
