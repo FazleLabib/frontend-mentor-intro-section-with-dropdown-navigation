@@ -25,12 +25,134 @@ header {
     padding: 2rem 1.5rem;
 }
 
+nav a {
+    text-decoration: none;
+    color: var(--medium-gray);
+}
+
+nav a:hover,
+.drop-down-btn:hover a {
+    transition: .2s ease-out;
+    color: var(--almost-black);
+}
+
 #desktop-navbar {
     display: none;
 }
 
 #mobile-menu-icon {
     cursor: pointer;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: hsla(0, 0%, 8%, 0.7);
+    overflow-x: hidden;
+    transition: .1s ease-out;
+}
+
+.overlay #menu-close-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 0.15rem;
+    padding: 2rem 1.5rem;
+    z-index: 2;
+}
+
+.overlay-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 50%;
+    height: 100%;
+    padding-top: 6rem; 
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: var(--almost-white);
+}
+
+.drop-down-btn {
+    cursor: pointer;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.drop-down-btn span {
+    width: 1rem;
+    aspect-ratio: 1;
+    background: url(./images/icon-arrow-down.svg) no-repeat;
+    background-position: center;
+}
+
+.drop-down-btn:hover span,
+.drop-down-btn:focus span,
+.drop-down-btn:active span {
+    transition: .2s ease-out;
+    background: url(./images/icon-arrow-up.svg) no-repeat;
+    background-position: center;
+    filter: brightness(0);
+}
+
+.drop-down-content {
+    display: none;
+    background-color: var(--almost-white);
+    border-radius: 0.5rem;
+    z-index: 2;
+    padding: 1rem;
+}
+
+.drop-down-content a {
+    display: flex;
+    gap: 0.85rem;
+    align-items: center;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--medium-gray);
+    padding: 0.5rem;
+}
+  
+.drop-down-content a:hover {
+    transition: .2s ease-out;
+    color: var(--almost-black);
+}
+
+.drop-down:hover .drop-down-content,
+.drop-down:focus .drop-down-content,
+.drop-down:active .drop-down-content {
+    transition: .2s ease-out;
+    display: block;
+}
+
+nav .buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-self: center;
+    align-items: center;
+}
+
+#register-btn {
+    width: 100%;
+    text-align: center;
+    border: 2px solid var(--medium-gray);
+    border-radius: 1rem;
+    padding: 0.85rem 0rem;
+}
+
+#register-btn:hover {
+    transition: .2s ease-out;
+    border: 2px solid var(--almost-black);
 }
 
 .container {
@@ -140,48 +262,12 @@ header {
         display: inline-block;
     }
 
-    .drop-down-btn {
-        cursor: pointer;
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .drop-down-btn span {
-        width: 1rem;
-        aspect-ratio: 1;
-        background: url(./images/icon-arrow-down.svg) no-repeat;
-        background-position: center;
-    }
-
-    nav a {
-        text-decoration: none;
-        color: var(--medium-gray);
-    }
-
-    nav a:hover,
-    .drop-down-btn:hover a {
-        transition: .2s ease-out;
-        color: var(--almost-black);
-    }
-
-    .drop-down-btn:hover span {
-        transition: .2s ease-out;
-        background: url(./images/icon-arrow-up.svg) no-repeat;
-        background-position: center;
-        filter: brightness(0);
-    }
-      
     .drop-down-content {
         display: block;
         position: absolute;
         top: 1.5rem;
-        background-color: var(--almost-white);
-        border-radius: 0.5rem;
         box-shadow: 0px 10px 50px -25px var(--almost-black);
         z-index: 1;
-        padding: 1rem;
         opacity: 0;
     }
     
@@ -193,44 +279,25 @@ header {
         min-width: 6rem;
     }
 
-    .drop-down-content a {
-        display: flex;
-        gap: 0.85rem;
-        align-items: center;
-        font-size: 0.95rem;
-        text-decoration: none;
-        color: var(--medium-gray);
-        padding: 0.5rem;
-    }
-      
-    .drop-down-content a:hover {
-        transition: .2s ease-out;
-        color: var(--almost-black);
-    }
-
     .drop-down:hover .drop-down-content,
     .drop-down:focus .drop-down-content {
         transition: .2s ease-out;
         opacity: 1;
     }
 
-
     nav .links,
     nav .buttons {
+        width: auto;
         display: flex;
+        flex-direction: row;
         gap: 2.5rem;
         align-items: center;
     }
-
+    
     #register-btn {
         border: 2px solid var(--medium-gray);
         border-radius: 1rem;
         padding: 0.85rem 1.5rem;
-    }
-
-    #register-btn:hover {
-        transition: .2s ease-out;
-        border: 2px solid var(--almost-black);
     }
 
     .container {
