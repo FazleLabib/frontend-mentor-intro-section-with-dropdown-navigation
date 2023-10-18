@@ -271,11 +271,11 @@ nav .buttons {
         opacity: 0;
     }
     
-    #features-menu {
+    .features-menu {
         transform: translateX(-4rem);
     }
 
-    #company-menu {
+    .company-menu {
         min-width: 6rem;
     }
 
