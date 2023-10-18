@@ -142,7 +142,7 @@ nav .buttons {
     align-items: center;
 }
 
-#register-btn {
+.register-btn {
     width: 100%;
     text-align: center;
     border: 2px solid var(--medium-gray);
@@ -150,7 +150,7 @@ nav .buttons {
     padding: 0.85rem 0rem;
 }
 
-#register-btn:hover {
+.register-btn:hover {
     transition: .2s ease-out;
     border: 2px solid var(--almost-black);
 }
@@ -294,7 +294,7 @@ nav .buttons {
         align-items: center;
     }
     
-    #register-btn {
+    .register-btn {
         border: 2px solid var(--medium-gray);
         border-radius: 1rem;
         padding: 0.85rem 1.5rem;
